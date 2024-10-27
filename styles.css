@@ -1,0 +1,224 @@
+
+
+body {/*supprime les marges et applique la police poppins à tous le fichier*/
+    font-family:"Poppins", sans-serif;
+    margin: 0;
+    color:#565e65;/*couleur de base du texte*/
+}
+.container{
+    max-width: 1480px;/*la class container ne dépassera pas 1480px si on agrandit l'écran*/
+    margin: 0 auto;/*les éléments restent centrés*/
+}
+.text-center{
+    text-align: center;/*toutes les class text-center sont centrées*/
+}
+.row{
+    display: flex;/*déclare display  flex sur tous les .row*//*active le modèle de boîte flexible (flexbox), qui permet de disposer les éléments enfants d'un conteneur de manière flexible et réactive.*/
+    flex-wrap: wrap;/*permet de faire descendre un élément si tous les éléments représentent plus de 100% de la taille de l'écran*/
+}
+/*les tailles des colonnes dans les conteneurs*/
+.col-100{
+    width: 100%;/*chaque classe col-100 représente 100% de la taille de l'écran*/
+}
+.col-25{
+    width: 25%;/*chaque class col-25 représente 25% de la taille de l'écran*/
+}
+.col-33{
+    width: 33.33%;
+}
+.col-50{
+    width: 50%;
+}
+/*les marges*/
+.mt-100{
+    margin-top: 100px;
+}
+.mt-50{/*crée une marge en haut de 50 pixels"*/
+    margin-top: 50px;
+}
+.mt-150{
+    margin-top: 150px;
+/*on crée une marge basse de 25px*/
+}
+.mt-250{
+    margin-top: 250px;
+}
+.mb-25{
+    margin-bottom: 25px;
+}
+
+/*les couleurs*/
+.color-yellow{/*on applique la couleur jaune à toutes ces éléments*/
+    color:#D5F31F;
+}
+.color-white{
+    color:white;
+}
+/*on définit taille et couleur des titres2*/
+h2{
+    font-size: 35px;
+    color:#1C2126;
+ }
+ /*on définit taille et couleur des titres1*/
+ h1{
+    color: #029d5b;
+    font-size: 60px;
+}
+/*Le header*/
+section{
+    /*padding-top: 5px;permet de ne pas couvrir les titres avec la barre de navigation*/
+}
+/* Style de base du header */
+header {
+    height: 66px;
+    background-color: white;
+    padding: 15px;/*permet d'espacer les éléments par rapport à la bordure du conteneur*/
+    width:1480px;/*on ajuste la largeur du header par rapport au reste de la page*/
+}
+/*création du logo textuel*/
+.logo {
+    font-size: 30px;
+    color: #015a08;
+    font-weight: 700;
+}
+.logo-italique{
+    font-style: italic;/*deuxiéme partie du logo en italique*/
+}
+/* La barre de navigation */
+.barre-nav{
+    background-color: white;
+    position: fixed;/*la barre reste à l'écran lorsqu'on fait défiler*/
+    width: 1480px;;
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, liens à droite */
+    align-items: center;/*aligne les éléments au centre le long de l'axe transversal*/
+    z-index: 999;/*on s'assure que les liens restent clicquables en étant au-dessus des autres éléments de la page*/
+}
+/* Style du menu */
+.menu ul {
+    list-style: none;/*on retire les points devant les éléments de la liste*/
+    display: flex;
+}
+/* Espacement des liens du menu */
+.menu ul li {
+    margin-left: 28px;/*on applique une marge de 28 à gauche de chaque éléments du menu*/
+}
+/* Style des liens */
+.menu ul li a {
+    text-decoration: none;/*on retire le surlignage des liens*/
+    color: #1C2126;/*on change la couleur des liens*/
+    font-size: 20px;
+    font-weight:700;
+}
+/* Style du menu burger (caché par défaut, qui apparait quand l'écran devient trop petit pour afficher tous les liens) */
+.burger {
+    display: none;/*on cache le menu burger*/
+    flex-direction: column;/*dispose les éléments du conteneur en colonne*/
+    cursor: pointer;/*affiche une main pour cliquer quand on passe sur le menu burger*/
+}
+/*on définit la taille des éléments du menu burger*/
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: #1C2126;
+}
+/*on place l'image d'accueil*/
+.image-feuille {
+    display: block;/*on la définit comme élément block*/
+    position:relative;/*on lui désigne une position relative*/
+    object-fit: cover;
+    width: 100%;
+    height: 850px;
+}
+.titre-accueil {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    color: white; /* Couleur du texte */
+    font-size: 55px; /* Taille du texte */
+    text-align: right; /* Centrage du texte */
+    font-weight: 600;
+}
+.modif-titre{
+    color: #d5f31f;
+    font-size: 65px;
+    font-weight: 700;
+}
+
+/*on définit la taille et la couleur de fond du bloc contact*/
+.bloc-contact{
+    background-color: #053B44;
+    width:100%;
+    height:850px;
+}
+/*on crée la grille dans laquelle on va placer les éléments de notre formulaire*/
+.container-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*on crée deux colonnes qui vont occuper chacune la moitié du container*/
+    grid-template-rows:50px 50px 50px 150px;/*on définit la hauteur des lignes*/
+    gap:60px;/*on espace les éléments de la grille*/
+}
+/*on modifie le style des champs*/
+input,textarea{
+    background-color:transparent;/*couleur transparente*/
+    width:100%;/*le champs prend la totalité de la largeur de la colonne*/
+    border:none;/*on retire les bordures*/
+    border-bottom: 3px solid;/*on crée une bordure large en bas du champs*/
+    border-color: white;
+    color:white;/*on définit la couleur du texte*/
+    font-size: 20px;/*on définit la taille de la police*/
+}
+/*on définit la place du label par rapport au champs*/
+.mp-label{
+    display: flex;
+    flex-direction: column;/*on place la label au dessus du champs*/
+    align-items: flex-start;/*on aligne le label et le champs sur la gauche du conteneur*/
+}
+/*on définit la couleur et la taille de la police du label*/
+label{
+    font-size: 20px;
+    color:white;
+}
+/*on place les éléments dans la grille*/
+.box-nom{
+    grid-column: 1/2;
+}
+.box-cat{
+    grid-column: 2/3;
+}
+.box-tel{
+    grid-column: 1/2;
+    grid-row: 2;
+}
+.box-ville{
+    grid-column:2/3 ;
+    grid-row: 2;
+}
+.box-mail{
+    grid-column: 1/3;
+    grid-row: 3;
+}
+.box-message{
+    grid-column: 1/3;
+    grid-row: 4;
+}
+button{
+    width:200px;
+    height:50px;
+    background-color: #D5F31F;
+    border-radius: 25px;
+    color:#1C2126;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px; /* Taille de la police */
+    cursor: pointer;
+
+}
+.cadre-bouton{
+    width:1480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
