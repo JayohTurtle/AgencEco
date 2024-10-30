@@ -16,9 +16,13 @@ body {/*supprime les marges et applique la police poppins à tous le fichier*/
     display: flex;/*déclare display  flex sur tous les .row*//*active le modèle de boîte flexible (flexbox), qui permet de disposer les éléments enfants d'un conteneur de manière flexible et réactive.*/
     flex-wrap: wrap;/*permet de faire descendre un élément si tous les éléments représentent plus de 100% de la taille de l'écran*/
 }
-/*les tailles des colonnes dans les conteneurs*/
+/*on empêche le header de chevaucher les titres*/
+section{
+    padding-top: 20px;
+}
+/*on définit l'espace occupé par chaque colonne*/
 .col-100{
-    width: 100%;/*chaque classe col-100 représente 100% de la taille de l'écran*/
+    width: 100%;/*chaque class col-100 représente 100% de la taille de l'écran*/
 }
 .col-25{
     width: 25%;/*chaque class col-25 représente 25% de la taille de l'écran*/
@@ -29,6 +33,7 @@ body {/*supprime les marges et applique la police poppins à tous le fichier*/
 .col-50{
     width: 50%;
 }
+
 /*les marges*/
 .mt-100{
     margin-top: 100px;
@@ -36,64 +41,56 @@ body {/*supprime les marges et applique la police poppins à tous le fichier*/
 .mt-50{/*crée une marge en haut de 50 pixels"*/
     margin-top: 50px;
 }
-.mt-150{
-    margin-top: 150px;
-/*on crée une marge basse de 25px*/
-}
-.mt-250{
-    margin-top: 250px;
-}
-.mb-25{
-    margin-bottom: 25px;
-}
-
 /*les couleurs*/
 .color-yellow{/*on applique la couleur jaune à toutes ces éléments*/
     color:#D5F31F;
 }
 .color-white{
     color:white;
-}
-/*on définit taille et couleur des titres2*/
-h2{
-    font-size: 35px;
-    color:#1C2126;
- }
+} 
+
  /*on définit taille et couleur des titres1*/
  h1{
     color: #029d5b;
     font-size: 60px;
 }
+/*on définit taille et couleur des titres2*/
+h2{
+    font-size: 35px;
+    color:#1C2126;
+}
+h3{
+    font-size: 25px;
+    color:#1C2126;
+}
+h4{
+    font-size:20px;
+    color:#015a08;
+}
 /*Le header*/
-section{
-    /*padding-top: 5px;permet de ne pas couvrir les titres avec la barre de navigation*/
-}
-/* Style de base du header */
+/* on définit la taille et la couleur du header */
 header {
-    height: 66px;
+    width:100%;
+    height: 65px;
     background-color: white;
-    padding: 15px;/*permet d'espacer les éléments par rapport à la bordure du conteneur*/
-    width:1480px;/*on ajuste la largeur du header par rapport au reste de la page*/
 }
-/*création du logo textuel*/
+
+/* La barre de navigation */
+.barre-nav{
+    background-color: white;
+    position: fixed;/*la barre reste à l'écran lorsqu'on fait défiler*/
+    width: 100%;
+    justify-content: space-around; /* on place le logo à gauche et les liens à droite, on laisse un espace par rapport au bord de la barre de navigation*/ */
+    align-items: center;/*aligne les éléments au centre le long de l'axe transversal*/
+    z-index: 999;/*on s'assure que les liens restent clicquables en étant au-dessus des autres éléments de la page*/
+}
+/*création du logo texte*/
 .logo {
     font-size: 30px;
     color: #015a08;
     font-weight: 700;
 }
-.logo-italique{
-    font-style: italic;/*deuxiéme partie du logo en italique*/
-}
-/* La barre de navigation */
-.barre-nav{
-    background-color: white;
-    position: fixed;/*la barre reste à l'écran lorsqu'on fait défiler*/
-    width: 1480px;;
-    display: flex;
-    justify-content: space-between; /* Logo à gauche, liens à droite */
-    align-items: center;/*aligne les éléments au centre le long de l'axe transversal*/
-    z-index: 999;/*on s'assure que les liens restent clicquables en étant au-dessus des autres éléments de la page*/
-}
+
 /* Style du menu */
 .menu ul {
     list-style: none;/*on retire les points devant les éléments de la liste*/
@@ -101,7 +98,7 @@ header {
 }
 /* Espacement des liens du menu */
 .menu ul li {
-    margin-left: 28px;/*on applique une marge de 28 à gauche de chaque éléments du menu*/
+    margin-left: 30px;/*on applique une marge de 30 px à gauche de chaque éléments du menu*/
 }
 /* Style des liens */
 .menu ul li a {
@@ -110,6 +107,7 @@ header {
     font-size: 20px;
     font-weight:700;
 }
+
 /* Style du menu burger (caché par défaut, qui apparait quand l'écran devient trop petit pour afficher tous les liens) */
 .burger {
     display: none;/*on cache le menu burger*/
@@ -122,29 +120,89 @@ header {
     height: 3px;
     background-color: #1C2126;
 }
-/*on place l'image d'accueil*/
+/*on définit la taille et la position de l'image feuille*/
 .image-feuille {
-    display: block;/*on la définit comme élément block*/
-    position:relative;/*on lui désigne une position relative*/
+    /*display: block;*/
+    /*position:relative;/*on lui désigne une position relative*/*/
     object-fit: cover;
     width: 100%;
     height: 850px;
 }
+/*on place le titre dans l'image feuille*/
 .titre-accueil {
     position: absolute;
     top: 70%;
     left: 50%;
-    color: white; /* Couleur du texte */
     font-size: 55px; /* Taille du texte */
     text-align: right; /* Centrage du texte */
     font-weight: 600;
 }
+/*on définit le style et la couleur du titre*/
+.titre-accueil a{
+    text-decoration: none;/*on retire le surlignage des liens*/
+    color: white; /* Couleur du texte */
+}
+/*on définit la couleur et la taille de la police de la deuxiéme partie du titre*/
 .modif-titre{
     color: #d5f31f;
     font-size: 65px;
     font-weight: 700;
 }
 
+/*l'équipe*/
+/*on modifie la taille et la forme de toutes les images team*/
+.team-modif{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;/*on fait un cercle*/
+    overflow: hidden;
+}
+.team-texte{
+    font-size: 20px;
+}
+
+/*les témoignages*/
+.container-temoin{
+    background-color: #053b44; /* Couleur de fond vert */
+    color: white;               /* Couleur du texte pour la lisibilité */
+    width:100%;
+    height: 400px;
+}
+/*on aligne les éléments horizontalement et verticalement*/
+.container-2500{
+    height:400px;
+    justify-content: center;
+    align-items: center;
+}
+/*taille et gras de la police des 2500*/
+.taille-2500{
+    font-size:65px;
+    font-weight: bold;
+}
+/*taille de la police du texte dous les 2500*/
+.taille-client{
+    font-size: 25px;
+}
+
+/*Services*/
+.cadre-service {
+    background-color: #f0f3f4; 
+    padding: 100px;             /* Espace autour de l'image */
+    display: inline-block;     /* Pour que le fond coloré s'adapte à l'image */
+    border-radius: 20px;       /* Coins arrondis pour un effet stylé */
+}
+.services{
+    /*display: block;*/
+    width: 150px;          
+    height: 150px;
+}
+.text-services{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*formulaire*/
 /*on définit la taille et la couleur de fond du bloc contact*/
 .bloc-contact{
     background-color: #053B44;
@@ -202,23 +260,163 @@ label{
     grid-column: 1/3;
     grid-row: 4;
 }
+/*on définit le style du bouton*/
 button{
     width:200px;
     height:50px;
     background-color: #D5F31F;
     border-radius: 25px;
-    color:#1C2126;
+    color:#1C2126;/*couleur de la police*/
     font-weight: bold;
     padding: 10px 20px;
     border: none;
     font-size: 20px; /* Taille de la police */
     cursor: pointer;
-
+    transition: transform 0.3s;/*on applique un transition pour l'effet visuel qui suit*/
 }
+/*le bouton s'agrandit quand on passe la souris dessus*/
+button:hover{
+    transform: scale(1.2);
+}
+/*on place le bouton à droite du formulaire*/
 .cadre-bouton{
     width:1480px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*on passe en direction colonne*/
     align-items: flex-end;
-
 }
+
+/*A propos*/
+/*on définit la taille et le style de la photo*/
+.pic-reunion{
+    width:700px;
+    height:500px;
+    border-radius: 30px;
+}
+/*on définit l'agencement de la photo et du cadre*/
+.container-a-propos{
+    justify-content: space-between;
+}
+/*on définit la taille, l'agencement des éléments et le style du cadre*/
+.cadre-a-propos{
+    width:700px;
+    height:500px;
+    border:2px solid;
+    border-radius:20px;
+    border-color: #053B44;
+    justify-content: center;
+    align-items: center;
+}
+/*on définit la largeur et l'agencement des icônes dans le cadre*/
+.container-logos{
+    width:500px;
+    justify-content: space-between;
+}
+/*la taille des logos*/
+.logo{
+    width:50px;
+    height:50px;
+}
+/*style et agencement à l'interieur des cercles autour des logos*/
+.cercle-logo{
+    width:100px;
+    height:100px;
+    border:5px solid;
+    border-radius:50%;
+    border-color: #053B44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*placement et couleur des textes sous les cercles logos*/
+.text-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#053B44;
+}
+/*galerie*/
+/*on définit la taille et le style du cadre de la photo galerie*/
+.photo{
+        display: block;
+        width: 100%;
+        height:850px;
+        border-radius: 20px;
+}
+
+/*le footer*/
+/*on défint la taille et la couleur du bandeau footer haut*/
+.container-mentions{
+    background-color: #053b44; /* Couleur de fond vert */
+    color: white;               /* Couleur du texte pour la lisibilité */
+    width:100%;
+    height: 300px;
+}
+/*on définit la taille et l'agencement du container des éléments*/
+.container-info{
+    height:300px;
+    width:1480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}  
+/*on définit la taille des icônes tel et localisation et leur agencement par rapport au texte qui suit*/
+.icon {
+    float: left; /* L'image se place à gauche du texte qui suit*/
+    margin-right: 50px; /*Espace entre l'image et le texte*/
+    width:30px;
+    height:30px;
+}
+/*on définit la taille et l'agencement du container des icônes tel et localisation*/
+.container-icon {
+    width:100%;
+    height:120px;
+    display: flex;
+    flex-direction: column;/*on passe dans la direction colonne pour pouvoir distribuer les icônes verticalement*/
+    justify-content: space-between;/*espace les deux icônes verticalement dans le container*/
+}
+/*on définit la taille et l'agencement du container qui contient le texte à droite des icônes tel et ocalisation*/
+.container-text-icon{
+    height:50px;
+    display: flex;
+    align-items: center;/*aligne le texte sur l'image horizontalement*/
+}
+/*on définit la taille et la couleur du bas du footer*/
+.container-end{
+    width:100%;
+    height:150px;
+    background-color:#042328;
+}
+/*on définit la hauteur et l'agencement du container des éléments*/
+.container-footer{
+    height:150px;
+    justify-content: space-between;
+    align-items: center;
+}
+/*on définit la taille des icônes réseaux sociaux et on applique une transition pour l'effet visuel qui suit*/
+.lien-sociaux{
+    width: 15px;
+    height:15px;
+    transition:opacity 0.3s;
+}
+/*on applique un effet visuel au passage de la souris sur ls liens réseaux sociaux*/
+.lien-sociaux:hover {
+    opacity: 0.5;
+}
+/*on définit la largeur et l'agencement du container pour ranger les liens réseau sociaux*/
+.container-sociaux{
+    width:120px;
+    justify-content: space-between;
+}
+/*on définit le style et l'agencement à l'interieur des cadres autour des liens réseaux soxiaux*/
+.cadre-sociaux{
+    width:30px;
+    height:30px;
+    border:2px solid;
+    border-radius:10px;
+    border-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
