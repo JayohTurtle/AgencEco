@@ -1,12 +1,15 @@
-
-
-body {/*supprime les marges et applique la police poppins à tous le fichier*/
-    font-family:"Poppins", sans-serif;
+/* Réinitialiser les marges et les paddings */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Poppins", sans-serif;
     color:#565e65;/*couleur de base du texte*/
 }
 .container{
-    max-width: 1480px;/*la class container ne dépassera pas 1480px si on agrandit l'écran*/
+    max-width: 1200px;/*la class container ne dépassera pas 1200px si on agrandit l'écran*/
     margin: 0 auto;/*les éléments restent centrés*/
 }
 .text-center{
@@ -33,7 +36,6 @@ section{
 .col-50{
     width: 50%;
 }
-
 /*les marges*/
 .mt-100{
     margin-top: 100px;
@@ -48,94 +50,101 @@ section{
 .color-white{
     color:white;
 } 
-
- /*on définit taille et couleur des titres1*/
+/*on définit taille et couleur des textes*/
+/*on définit taille et couleur des titres1*/
+p{
+    font-size: 20px;
+ }
  h1{
     color: #029d5b;
-    font-size: 60px;
+    font-size: 4rem;
 }
 /*on définit taille et couleur des titres2*/
 h2{
-    font-size: 35px;
+    font-size: 3rem;
     color:#1C2126;
 }
 h3{
-    font-size: 25px;
+    font-size: 2rem;
     color:#1C2126;
 }
 h4{
-    font-size:20px;
+    font-size:1.5rem;
     color:#015a08;
 }
-/*Le header*/
-/* on définit la taille et la couleur du header */
-header {
-    width:100%;
-    height: 65px;
-    background-color: white;
-}
 
-/* La barre de navigation */
-.barre-nav{
+/* Style de base pour l'en-tête */
+header {
     background-color: white;
-    position: fixed;/*la barre reste à l'écran lorsqu'on fait défiler*/
-    width: 100%;
-    justify-content: space-around; /* on place le logo à gauche et les liens à droite, on laisse un espace par rapport au bord de la barre de navigation*/ */
-    align-items: center;/*aligne les éléments au centre le long de l'axe transversal*/
-    z-index: 999;/*on s'assure que les liens restent clicquables en étant au-dessus des autres éléments de la page*/
+    color: #1c2126;
 }
-/*création du logo texte*/
+/* La barre de navigation */
+.navbar {
+    background-color: white;
+    width:100%;
+    padding:30px;
+    position:fixed;
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, liens à droite */
+    align-items: center;
+    z-index: 1000;
+}
+/* Style du logo */
 .logo {
-    font-size: 30px;
-    color: #015a08;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: bold;
+    color:#015a08
 }
 
 /* Style du menu */
 .menu ul {
-    list-style: none;/*on retire les points devant les éléments de la liste*/
+    list-style: none;
     display: flex;
 }
+
 /* Espacement des liens du menu */
 .menu ul li {
-    margin-left: 30px;/*on applique une marge de 30 px à gauche de chaque éléments du menu*/
-}
-/* Style des liens */
-.menu ul li a {
-    text-decoration: none;/*on retire le surlignage des liens*/
-    color: #1C2126;/*on change la couleur des liens*/
-    font-size: 20px;
-    font-weight:700;
+    margin-left: 20px;
 }
 
-/* Style du menu burger (caché par défaut, qui apparait quand l'écran devient trop petit pour afficher tous les liens) */
-.burger {
-    display: none;/*on cache le menu burger*/
-    flex-direction: column;/*dispose les éléments du conteneur en colonne*/
-    cursor: pointer;/*affiche une main pour cliquer quand on passe sur le menu burger*/
+/* Style des liens */
+.menu ul li a {
+    text-decoration: none;
+    color: #1c2126;
+    font-size: 20px;
+    font-weight: bold;
 }
-/*on définit la taille des éléments du menu burger*/
+
+/* Style du menu burger (caché par défaut) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
 .burger span {
     width: 25px;
     height: 3px;
-    background-color: #1C2126;
+    background-color: #1c2126;
+    margin: 4px;
 }
 /*on définit la taille et la position de l'image feuille*/
 .image-feuille {
-    /*display: block;*/
-    /*position:relative;/*on lui désigne une position relative*/*/
+    display: block;
+    position:relative;
     object-fit: cover;
+    object-position: center;
     width: 100%;
-    height: 850px;
+    height: 950px;
 }
 /*on place le titre dans l'image feuille*/
 .titre-accueil {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    font-size: 55px; /* Taille du texte */
+    top: 65vh;
+    left: 40vw;
+    font-size: 3.5vw; /* Taille du texte */
     text-align: right; /* Centrage du texte */
-    font-weight: 600;
+    font-weight: 700;
 }
 /*on définit le style et la couleur du titre*/
 .titre-accueil a{
@@ -145,11 +154,11 @@ header {
 /*on définit la couleur et la taille de la police de la deuxiéme partie du titre*/
 .modif-titre{
     color: #d5f31f;
-    font-size: 65px;
+    font-size: 4.5vw;
     font-weight: 700;
 }
-
 /*l'équipe*/
+
 /*on modifie la taille et la forme de toutes les images team*/
 .team-modif{
     width: 200px;
@@ -158,14 +167,10 @@ header {
     border-radius: 50%;/*on fait un cercle*/
     overflow: hidden;
 }
-.team-texte{
-    font-size: 20px;
-}
-
 /*les témoignages*/
-.container-temoin{
+.bloc-temoin{
     background-color: #053b44; /* Couleur de fond vert */
-    color: white;               /* Couleur du texte pour la lisibilité */
+    color: white;               /* Couleur du texte*/
     width:100%;
     height: 400px;
 }
@@ -177,14 +182,13 @@ header {
 }
 /*taille et gras de la police des 2500*/
 .taille-2500{
-    font-size:65px;
+    font-size:65px; 
     font-weight: bold;
 }
 /*taille de la police du texte dous les 2500*/
 .taille-client{
     font-size: 25px;
 }
-
 /*Services*/
 .cadre-service {
     background-color: #f0f3f4; 
@@ -201,41 +205,38 @@ header {
     font-size: 30px;
     font-weight: bold;
 }
-
-/*formulaire*/
-/*on définit la taille et la couleur de fond du bloc contact*/
 .bloc-contact{
-    background-color: #053B44;
     width:100%;
-    height:850px;
+    background-color: #053b44;
+    height:1000px;
+    display: flex;
+    align-items: center;
 }
-/*on crée la grille dans laquelle on va placer les éléments de notre formulaire*/
-.container-contact{
+.form-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;/*on crée deux colonnes qui vont occuper chacune la moitié du container*/
-    grid-template-rows:50px 50px 50px 150px;/*on définit la hauteur des lignes*/
-    gap:60px;/*on espace les éléments de la grille*/
+    grid-template-rows:30px 30px 30px 150px;/*on définit la hauteur des lignes*/
+    gap:100px;/*on espace les éléments de la grille*/
 }
-/*on modifie le style des champs*/
-input,textarea{
-    background-color:transparent;/*couleur transparente*/
-    width:100%;/*le champs prend la totalité de la largeur de la colonne*/
-    border:none;/*on retire les bordures*/
-    border-bottom: 3px solid;/*on crée une bordure large en bas du champs*/
-    border-color: white;
-    color:white;/*on définit la couleur du texte*/
-    font-size: 20px;/*on définit la taille de la police*/
-}
+
 /*on définit la place du label par rapport au champs*/
 .mp-label{
     display: flex;
     flex-direction: column;/*on place la label au dessus du champs*/
     align-items: flex-start;/*on aligne le label et le champs sur la gauche du conteneur*/
 }
-/*on définit la couleur et la taille de la police du label*/
+input,textarea{
+    background-color: transparent;
+    border:none ;
+    border-bottom: 3px solid;
+    border-color: white;
+    color:white;
+    font-size: 20px;
+    width:100%;
+}
 label{
     font-size: 20px;
-    color:white;
+    color: white;
 }
 /*on place les éléments dans la grille*/
 .box-nom{
@@ -260,7 +261,6 @@ label{
     grid-column: 1/3;
     grid-row: 4;
 }
-/*on définit le style du bouton*/
 button{
     width:200px;
     height:50px;
@@ -272,151 +272,356 @@ button{
     border: none;
     font-size: 20px; /* Taille de la police */
     cursor: pointer;
-    transition: transform 0.3s;/*on applique un transition pour l'effet visuel qui suit*/
+    transition: opacity 0.2s ease;/*on applique un transition pour l'effet visuel qui suit*/
 }
-/*le bouton s'agrandit quand on passe la souris dessus*/
+.mp-bouton{
+    margin-top: 20px;
+    display:flex;
+    justify-content: flex-end;
+}
+/*le bouton s'assombrit quand on passe la souris dessus*/
 button:hover{
-    transform: scale(1.2);
+    opacity: 0.7;
 }
-/*on place le bouton à droite du formulaire*/
-.cadre-bouton{
-    width:1480px;
-    display: flex;
-    flex-direction: column;/*on passe en direction colonne*/
-    align-items: flex-end;
-}
-
 /*A propos*/
 /*on définit la taille et le style de la photo*/
+.container-a-propos{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
 .pic-reunion{
-    width:700px;
+    object-fit: cover;
+    object-position: center;
+    width:580px;
     height:500px;
     border-radius: 30px;
 }
-/*on définit l'agencement de la photo et du cadre*/
-.container-a-propos{
-    justify-content: space-between;
-}
+
 /*on définit la taille, l'agencement des éléments et le style du cadre*/
 .cadre-a-propos{
-    width:700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:580px;
     height:500px;
     border:2px solid;
     border-radius:20px;
     border-color: #053B44;
-    justify-content: center;
-    align-items: center;
 }
-/*on définit la largeur et l'agencement des icônes dans le cadre*/
-.container-logos{
-    width:500px;
-    justify-content: space-between;
-}
+
 /*la taille des logos*/
+
 .logo{
-    width:50px;
+    width:60px;
     height:50px;
 }
+
 /*style et agencement à l'interieur des cercles autour des logos*/
 .cercle-logo{
-    width:100px;
-    height:100px;
-    border:5px solid;
-    border-radius:50%;
+    background-color: white; 
+    padding: 40px;             /* Espace autour de l'image */
+    display: inline-block;     /* Pour que le fond coloré s'adapte à l'image */
+    border-radius: 50%;
     border-color: #053B44;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 7px solid;
 }
 /*placement et couleur des textes sous les cercles logos*/
 .text-logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color:#053B44;
-}
-/*galerie*/
-/*on définit la taille et le style du cadre de la photo galerie*/
-.photo{
-        display: block;
-        width: 100%;
-        height:850px;
-        border-radius: 20px;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
-/*le footer*/
-/*on défint la taille et la couleur du bandeau footer haut*/
-.container-mentions{
-    background-color: #053b44; /* Couleur de fond vert */
-    color: white;               /* Couleur du texte pour la lisibilité */
-    width:100%;
-    height: 300px;
+/*Galerie*/
+    .photo-galerie{
+        width: 100%;
+        height:auto;
+        border-radius: 20px;
+    }
+    .bloc-mentions{
+        background-color: #053B44;
+        width:100%;
+        height:300px;
+    }
+    .container-mentions{
+        display: flex;
+        width:100%;
+        height:300px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon{
+        float: left; /* L'image se place à gauche du texte qui suit*/
+        margin-right: 20px; /*Espace entre l'image et le texte*/
+        width:30px;
+        height: 30px;
+    }
+    .mp-icon{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .align-icon{
+        display: flex;
+        align-items: center;
+    }
+    .marge-icon{
+        margin-top: 50px;
+    }
+    /*on définit la taille et la couleur du bas du footer*/
+    .bloc-end{
+        width:100%;
+        height:150px;
+        background-color:#042328;
+    }
+    /*on définit la hauteur et l'agencement du container des éléments*/
+    .container-footer{
+        width:100%;
+        height:150px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*on définit la taille des icônes réseaux sociaux et on applique une transition pour l'effet visuel qui suit*/
+    .lien-sociaux{
+        width: 15px;
+        height:15px;
+        transition:opacity 0.3s;
+    }
+    /*on applique un effet visuel au passage de la souris sur ls liens réseaux sociaux*/
+    .lien-sociaux:hover {
+        opacity: 0.5;
+    }
+    /*on définit la largeur et l'agencement du container pour ranger les liens réseau sociaux*/
+    .container-sociaux{
+        width:120px;
+        justify-content: space-between;
+    }
+    /*on définit le style et l'agencement à l'interieur des cadres autour des liens réseaux soxiaux*/
+    .cadre-sociaux{
+        width:30px;
+        height:30px;
+        border:2px solid;
+        border-radius:10px;
+        border-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+@media (max-width:1200px){
+    .navbar {
+        padding:20px;
+    }
+    .mt-100{
+        margin-top: 50px;
+    }
+    .mt-50{
+        margin-top: 25px;
+    }
+    /*on définit taille et couleur des textes*/
+    h1{
+        font-size: 3rem;
+    }
+    /*on définit taille et couleur des titres2*/
+    h2{
+        padding: 25px;
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size:1.5rem;
+    }   
+    .menu ul li {
+        margin-left: 10px;
+    }
+    .menu ul li a {
+        font-size: 0.8rem;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .image-feuille{
+        height:auto;
+    }
+    .titre-accueil {
+        top: 30vh;
+        left: 35vw;
+    }
+    .taille-2500{
+        font-size:50px; 
+        font-weight: bold;
+    }
+    .taille-client{
+        font-size:20px;
+    }
+    .bloc-contact{
+        padding:15px;
+    }
+
+    .pic-reunion{
+        width:100%;
+        height:auto;
+        overflow: hidden;
+    }
+    /*on définit la taille, l'agencement des éléments et le style du cadre*/
+    .cadre-a-propos{
+        position: absolute;
+        top:30vh;
+        left:0vw;
+        opacity:0.9;
+        background-color: white;
+    }
+    .container-mentions{
+        padding:20px;
+    }
+    .container-footer{
+        padding:20px;
+    }
+    .no-pad{
+        padding:0;
+    }
+    .marge-icon{
+        margin-top: 20px;
+    }
+    .text-icon{
+        font-size: 15px;
+    }
+  }
+
+/* Responsive - menu burger s'affiche en dessous de 768px */
+@media (max-width: 768px) {
+    .col-sm-100{
+        width:100%;
+    }
+    .mt-100{
+        margin-top: 10px;
+    }
+    .mt-50{
+        margin-top: 20px;
+    }
+    /*on définit taille et couleur des textes*/
+    p{
+        font-size: 15px;
+        padding: 30px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    /*on définit taille et couleur des titres2*/
+    h2{
+        padding: 25px;
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+    h4{
+        font-size:1.1rem;
+    }    
+    /*taille et gras de la police des 2500*/
+    .taille-2500{
+        font-size:40px;
+    }   
+    /*taille de la police du texte dous les 2500*/
+    .taille-client{
+        font-size: 20px;
+    }
+    /*Services*/
+    .cadre-service {
+        padding: 50px;             /* Espace autour de l'image */
+    }
+    .services{
+        width: 100px;          
+        height: 100px;
+    }
+    .text-services{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        display: none; /* Cacher le menu normal */
+    }
+
+    .burger {
+        display: flex; /* Afficher le burger */
+    }
+
+    /* Menu en mode mobile */
+    .menu.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active ul {
+        flex-direction: column; /* Liste verticale */
+    }
+    .menu.active ul li {
+        margin: 15px 0;
+    }
+    .form-grid{
+        display: block;  
+    }
+    .bloc-contact{
+        padding:15px;
+        height:850px;
+    }
+    .container-a-propos{
+        display: block;
+        width:1000px;
+    }
+    .cadre-a-propos{
+        position: static;
+        background-color: transparent;
+        width:100%;
+    }
+    .logo{
+        width:45px;
+        height:35px;
+    }
+    /*style et agencement à l'interieur des cercles autour des logos*/
+    .cercle-logo{
+        padding: 15px;             /* Espace autour de l'image */
+    }
+    /*placement et couleur des textes sous les cercles logos*/
+    .text-logo{
+        font-size: 15px;
+    }
+
+    .mt-20{
+        margin-top:20px;
+    }
+    .container-mentions{
+        display: block;
+    }
+    .bloc-mentions{
+        height:620px;
+    }
+    .marge-icon{
+        margin-top: 20px;
+    }
 }
-/*on définit la taille et l'agencement du container des éléments*/
-.container-info{
-    height:300px;
-    width:1480px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}  
-/*on définit la taille des icônes tel et localisation et leur agencement par rapport au texte qui suit*/
-.icon {
-    float: left; /* L'image se place à gauche du texte qui suit*/
-    margin-right: 50px; /*Espace entre l'image et le texte*/
-    width:30px;
-    height:30px;
+
+/* Positionnement pour les petits écrans */
+@media (max-width: 600px) {
+    .titre-accueil {
+      top: 20vh;
+      left: 35vw;
+    }
 }
-/*on définit la taille et l'agencement du container des icônes tel et localisation*/
-.container-icon {
-    width:100%;
-    height:120px;
-    display: flex;
-    flex-direction: column;/*on passe dans la direction colonne pour pouvoir distribuer les icônes verticalement*/
-    justify-content: space-between;/*espace les deux icônes verticalement dans le container*/
-}
-/*on définit la taille et l'agencement du container qui contient le texte à droite des icônes tel et ocalisation*/
-.container-text-icon{
-    height:50px;
-    display: flex;
-    align-items: center;/*aligne le texte sur l'image horizontalement*/
-}
-/*on définit la taille et la couleur du bas du footer*/
-.container-end{
-    width:100%;
-    height:150px;
-    background-color:#042328;
-}
-/*on définit la hauteur et l'agencement du container des éléments*/
-.container-footer{
-    height:150px;
-    justify-content: space-between;
-    align-items: center;
-}
-/*on définit la taille des icônes réseaux sociaux et on applique une transition pour l'effet visuel qui suit*/
-.lien-sociaux{
-    width: 15px;
-    height:15px;
-    transition:opacity 0.3s;
-}
-/*on applique un effet visuel au passage de la souris sur ls liens réseaux sociaux*/
-.lien-sociaux:hover {
-    opacity: 0.5;
-}
-/*on définit la largeur et l'agencement du container pour ranger les liens réseau sociaux*/
-.container-sociaux{
-    width:120px;
-    justify-content: space-between;
-}
-/*on définit le style et l'agencement à l'interieur des cadres autour des liens réseaux soxiaux*/
-.cadre-sociaux{
-    width:30px;
-    height:30px;
-    border:2px solid;
-    border-radius:10px;
-    border-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media(min-width:768px) and (max-width:1200px){
+    .container-a-propos{
+        position: relative;
+        height:800px
+    }
 }
 

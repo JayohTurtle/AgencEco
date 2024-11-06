@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-    <html lang="fr">
- <head>
-    <meta charset="utf-8">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AgencEco est une agence web spécialisée dans l'écoresponsabilité">
-    <title>L'agence web écologique</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>AgencEco</title>
+    <meta name="description" content="Agenceco est une agence web qui allie communication et écologie">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
- </head>
- <body>
-    <header class="text-center row" id="accueil">
-        <nav class="barre-nav row">
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers notre fichier CSS -->
+</head>
+<body>
+    <header id="accueil">
+        <nav class="navbar">
             <div class="logo">Agenc<em>eco</em></div> <!-- Logo textuel -->
             <div class="menu" id="menu">
                 <ul>
@@ -31,38 +31,43 @@
             </div>
         </nav>
     </header>
-    <script src="script.js"></script> <!-- Lien vers notre fichier JavaScript -->
-        <div>
-            <img src="images/rodion-kutsaev-049M_crau5k-unsplash-1.jpg" alt="Photo de feuilles vertes" class="image-feuille">
-            <div class="titre-accueil">
-               <a href="#a-propos"> Bienvenue dans votre <br><span class="modif-titre">agence web écologique</span></a>
-            </div>
+    <div>
+        <a href="image360.html" target="_blank"> <img src="images/rodion-kutsaev-049M_crau5k-unsplash-1.jpg" alt="Photo de feuilles vertes" class="image-feuille"></a>
+        <div class="titre-accueil">
+            <a href="#a-propos" > Bienvenue dans votre <br><span class="modif-titre">agence web écologique</span></a>
         </div>
+    </div>
     <section id="team">
         <div class="container text-center mt-100">
             <h1>Notre équipe</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h2>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h2>
             <div class="row mt-100">
                 <div class="col-33 col-sm-100">
                     <img class="team-modif" src="images/image-1.jpg" alt="1rst team">
                     <h3>Julie Dupond</h3>
-                    <div class="team-texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
                 </div>
                 <div class="col-33 col-sm-100">
                     <img class="team-modif" src="images/image-2.jpg" alt="2nd team">
                     <h3>Roméo Sylla</h3>
-                    <div class="team-texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
                 </div>
                 <div class="col-33 col-sm-100">
                     <img class="team-modif" src="images/image-3.jpg" alt="3rd team">
                     <h3>Javier Bardem</h3>
-                    <div class="team-texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <div id="temoins">
-        <div class="container-temoin text-center mt-100">
+        <div class="bloc-temoin text-center mt-100">
             <div class="container container-2500 text-center row">
                 <div class="col-25 col-sm-100">
                     <div class="color-yellow taille-2500">2500</div>
@@ -83,7 +88,7 @@
             </div>
         </div>
     </div>
-     <section id="services">
+    <section id="services">
         <div class="container text-center mt-100">
             <h1 class="mt-50 mt-70b">Nos services</h1>
             <div class="row mt-100">
@@ -103,68 +108,78 @@
         </div>
     </section>
     <section id="contact">
-        <div class="bloc-contact text-center mt-100">
-            <h1 class="color-yellow">Contactez-nous</h1>
-            <h2 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</h2>
-            <form method="get" action="#">
-                <div class="container-contact container mt-100">
-                    <div class="box-nom mp-label">
-                        <label>Nom</label>
-                        <input type="text" name="nom" id="nom" required>
-                    </div>
-                    <div class="box-cat mp-label" >
-                        <label>Catégorie</label>
-                        <input type="text" name="categorie" id="categorie" required>
-                    </div>
-                    <div class="box-tel mp-label">
-                        <label>Téléphone</label>
-                        <input type="tel" name="telephone" id="telephone" required>
-                    </div>
-                    <div class="box-ville mp-label">
-                        <label>Ville</label>
-                        <input type="text" name="ville" id="ville" required>
-                    </div>
-                    <div class="box-mail mp-label">
-                        <label>Email</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    <div class="box-message mp-label">
-                        <label for="message">Message</label><br>
-                        <textarea name="message" id="message"></textarea>
-                    </div>
+        <div class="bloc-contact mt-100">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="color-yellow">Contactez-nous</h1>
+                    <h2 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</h2>
                 </div>
-                <div class="cadre-bouton container">
-                    <button type="submit">Envoyer</button>
-                </div>
-            </form>
+                <form method="get" action="#">
+                    <div class="form-grid mt-50">
+                        <div class="box-nom mp-label">
+                            <label>Nom</label>
+                            <input type="text" name="nom" id="nom" required>
+                        </div>
+                        <div class="box-cat mp-label" >
+                            <label>Catégorie</label>
+                            <input type="text" name="categorie" id="categorie" required>
+                        </div>
+                        <div class="box-tel mp-label">
+                            <label>Téléphone</label>
+                            <input type="tel" name="telephone" id="telephone" required>
+                        </div>
+                        <div class="box-ville mp-label">
+                            <label>Ville</label>
+                            <input type="text" name="ville" id="ville" required>
+                        </div>
+                        <div class="box-mail mp-label">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="box-message mp-label">
+                            <label for="message">Message</label><br>
+                            <textarea name="message" id="message" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="mp-bouton">
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
-    <section id="a-propos">
-        <div class="container row text-center mt-100 container-a-propos">
-            <div>
-                <img src="images/photo-a-propos.jpg" alt="une photo de réunion" class="pic-reunion">
-            </div>
-            <div class="cadre-a-propos row text-center">
-                <h2>A propos de nous</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</p>
-                <div class="container-logos row text-center">
-                    <div class="text-logo">
-                        <div class="cercle-logo">
-                            <img src="images/Vector-2.jpg" alt="une planete dans la main" class="logo">
-                        </div>    
-                        <h4>Ecologique</h4>
-                    </div>
-                    <div class="text-logo">
-                        <div class="cercle-logo">
-                            <img src="images/Vector-3.jpg" alt="une goutte dans la main" class="logo">
+    <section id="a-propos">          
+        <div class="container row mt-100">
+            <div class="container-a-propos">
+                <div>
+                    <img src="images/jason-goodman-Oalh2MojUuk-unsplash-1.jpg" alt="une photo de réunion" class="pic-reunion">
+                </div>
+                <div>
+                    <div class="cadre-a-propos text-center" >
+                        <div>
+                            <h2>A propos de nous</h2>
                         </div>
-                        <h4>Responsable</h4>
-                    </div>
-                    <div class="text-logo">
-                        <div class="cercle-logo">
-                            <img src="images/Vector-4.jpg" alt="une horloge" class="logo">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</div>
+                        <div class="row">
+                            <div class="col-33 col-sm-100">
+                                <div class="cercle-logo">
+                                    <img src="images/Vector-2.jpg" alt="une planete dans la main" class="logo">
+                                </div>
+                                <div class="text-logo">Ecologique</div>
+                            </div>
+                            <div class="col-33 col-sm-100">
+                                <div class="cercle-logo">
+                                    <img src="images/Vector-3.jpg" alt="une goutte dans la main" class="logo">
+                                </div>
+                                <div class="text-logo">Responsable</div>
+                            </div>   
+                            <div class="col-33 col-sm-100">
+                                <div class="cercle-logo">
+                                    <img src="images/Vector-4.jpg" alt="horloge 24/7" class="logo">
+                                </div>
+                                <div class="text-logo">24/7 Assistance</div>
+                            </div>   
                         </div>
-                        <h4>24/7 Assistance</h4>
                     </div>
                 </div>
             </div>
@@ -172,59 +187,65 @@
     </section>
     <section id="galerie">
         <div class="container text-center mt-100">
-            <h1>Notre galerie</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h2>
-                <img src="images/kevin-bhagat.jpg" alt="un ordinateur portable sur une table" class="photo">
+            <div>
+                <h1>Notre galerie</h1>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h2>
+            </div>
+            <div class=mt-50>
+                <img src="images/kevin-bhagat.jpg" alt="un ordinateur sur un bureau" class="photo-galerie">
+            </div>
         </div>
     </section>
-        <footer class="container-mentions mt-100">
-            <div class="container container-info">
-                <div class="col-sm-100">
-                    <div class="color-white taille-client">
-                        Content
+    <footer>
+        <div class="bloc-mentions mt-50">
+            <div class="container">
+                <div class="container-mentions">
+                    <div class="color-white">
+                        <div class="taille-client">
+                            Content
+                        </div>
+                        <div class="mt-50">Lorem ipsum</div>
+                        <div>sit amet</div>
                     </div>
-                    <p >Lorem ipsum
-                    <br>dolor sit</p>
-                </div>
-                <div class="col-sm-100">
-                    <div class="color-white taille-client ">
-                        Informations
+                    <div class="color-white mt-20">
+                        <div class="taille-client">
+                            Informations
+                        </div>
+                        <div class="mt-50">Lorem ipsum</div>
+                        <div>sit amet</div>
                     </div>
-                    <p>Lorem ipsum
-                    <br>dolor sit</p>
-                </div>
-                <div class="col-sm-100 ">
-                    <div class="color-white taille-client">
-                        Services
+                    <div class="color-white">
+                        <div class="taille-client mt-20">
+                            Services
+                        </div>
+                        <div class="mt-50">Lorem ipsum</div>
+                        <div>sit amet</div>
                     </div>
-                    <p>Lorem ipsum
-                    <br>dolor sit</p>
-                </div>
-                <div class="col-sm-100 ">
-                    <div class="color-white taille-client">
-                        Aide
+                    <div class="color-white mt-20">
+                        <div class="taille-client">
+                            Aide
+                        </div>
+                        <div class="mt-50">Lorem ipsum</div>
+                        <div>sit amet</div>
                     </div>
-                    <p>Lorem ipsum
-                    <br>dolor sit</p>
-                </div>
-                <div class="col-sm-100">
-                    <div class="container-icon">
-                        <div class="container-text-icon">
-                            <img  src="images/telephone.png" alt="icône de téléphone" class="icon">
-                            <p>+33 00 00 00 00<br>+33 00 00 00 00</p>
-                        </div>    
-                        <div class="container-text-icon">
-                            <img  src="images/localisation.png" alt="icône de localisation" class="icon">
-                            <p>75001 Paris<br>France</p>
+                    <div class="mp-icon mt-20">
+                        <div class="align-icon">
+                            <img src="images/telephone.png" alt="Icône de téléphone" class="icon">
+                                <p class="color-white no-pad text-icon">+33 00 00 00 00<br>+33 00 00 00 00</p>
+                        </div>
+                        <div class="align-icon marge-icon">
+                            <img src="images/localisation.png" alt="Icône de localisation" class="icon">
+                            <p class="color-white no-pad text-icon">Paris 75001<br>France</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container-end">
-                <div class="container container-footer row">
-                    <div class="color-white">
-                        <p>Copyright &copy; 2021 AGENCECO 2021 - All rights reserved</p>
-                    </div>
+        </div>
+        <div class="bloc-end">
+            <div class="container container-footer row">
+                <div class="color-white">
+                    <p class="no-pad">Copyright &copy; 2021 AGENCECO 2021 - All rights reserved</p>
+                </div>
                 <div class="container-sociaux row">
                     <div class="cadre-sociaux">
                         <a target="_blank" href="https://www.facebook.com/">
@@ -233,16 +254,17 @@
                     </div>
                     <div class="cadre-sociaux">
                         <a target="_blank" href="https://www.twitter.com/">
-                            <img src="images/twitter.png" alt="Logo Twitter"class="lien-sociaux">
+                            <img src="images/twitter.png" alt="Logo Twitter" class="lien-sociaux">
                         </a>
                     </div>
-                     <div class="cadre-sociaux">
+                        <div class="cadre-sociaux">
                         <a target="_blank" href="https://www.instagram.com/">
                             <img src="images/instagram.png" alt="Logo Instagram" class="lien-sociaux">
                         </a>
                     </div>
                 </div>
             </div>
-        </footer>
- </body>
- </html>
+        </div>
+    </footer>
+</body>
+</html>
