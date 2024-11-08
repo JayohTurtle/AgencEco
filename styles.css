@@ -573,8 +573,13 @@ button:hover{
 }
 @media (max-width:515px){
     #banner h1{/*on redéfinit la marge haute lorsque la deuxième partie du titre passe à la ligne*/
-        margin-top: -255px;
+        margin-top: -380px;
+    }
+    /*on augmente la marge entre le titre et la section team pour que la titre de section en remonte pas sur l'image*/
+    .marg-team{
+        margin-top: 200px;
     }
 }
+
 
 
