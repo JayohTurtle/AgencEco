@@ -31,34 +31,35 @@
             </div>
         </nav>
     </header>
-    <div><!--photo de la page d'accueil avec message d'accueil incrusté dans l'image-->
-        <a href="image360.html" target="_blank"> <img src="images/rodion-kutsaev-049M_crau5k-unsplash-1.jpg" alt="Photo de feuilles vertes" class="image-feuille"></a>
-        <div class="titre-accueil">
-            <a href="#a-propos" > Bienvenue dans votre <br><span class="modif-titre">agence web écologique</span></a>
-        </div>
-    </div>
+    <section id="banner">
+        <a href="image360.html" target="_blank"> 
+            <img src="images/rodion-kutsaev-049M_crau5k-unsplash-1.jpg" alt="Photo de feuilles vertes" 
+            class="image-banner">
+        </a>
+        <h1><a href="#a-propos" > Bienvenue dans votre <br><span class="modif-titre">agence web écologique</span></a></h1>
+    </section>
     <section id="team"><!--section concernant l'équipe-->
-        <div class="container text-center mt-100"><!--container avec 3 portraits en ligne + texte en dessous de chaque portrait-->
-            <h1>Notre équipe</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h2>
+        <div class="container text-center marg-team mt-sm-100"><!--container avec 3 portraits en ligne + texte en dessous de chaque portrait-->
+            <h2>Notre équipe</h2>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
             <div class="row mt-100">
                 <div class="col-33 col-sm-100">
                     <img class="team-modif" src="images/image-1.jpg" alt="1rst team">
-                    <h3>Julie Dupond</h3>
+                    <h4>Julie Dupond</h4>
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
                 </div>
                 <div class="col-33 col-sm-100">
                     <img class="team-modif" src="images/image-2.jpg" alt="2nd team">
-                    <h3>Roméo Sylla</h3>
+                    <h4>Roméo Sylla</h4>
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
                 </div>
                 <div class="col-33 col-sm-100">
                     <img class="team-modif" src="images/image-3.jpg" alt="3rd team">
-                    <h3>Javier Bardem</h3>
+                    <h4>Javier Bardem</h4>
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
@@ -68,7 +69,7 @@
     </section>
     <div id="temoins"><!--section des témoignages utilisateurs-->
         <div class="bloc-temoin text-center mt-100"><!--création du bloc de couleur background-->
-            <div class="container container-2500 text-center row"><!--container avec 4 témoignages en ligne-->
+            <div class="container container-temoin row "><!--container avec 4 témoignages en ligne-->
                 <div class="col-25 col-sm-100">
                     <div class="color-yellow taille-2500">2500</div>
                     <div class="color-white taille-client">Clients satisfaits</div>
@@ -90,9 +91,9 @@
     </div>
     <section id="services"><!--section des services-->
         <div class="container text-center mt-100"><!--container avec deux images en ligne avec titre en dessous-->
-            <h1 class="mt-50 mt-70b">Nos services</h1>
+            <h2 class="mt-50">Nos services</h2>
             <div class="row mt-100">
-                <div class="col-50 col-sm-100">
+                <div class="col-50 col-sm-100 ">
                     <div class="cadre-service">
                         <img class="services" src="images/Vector.jpg" alt="site web">   
                     </div>
@@ -108,11 +109,11 @@
         </div>
     </section>
     <section id="contact"><!--section du formulaire de contact-->
-        <div class="bloc-contact mt-100"><!--création du bloc de couleur-->
+        <div class="container-contact mt-100"><!--création du bloc de couleur-->
             <div class="container">
                 <div class="text-center">
-                    <h1 class="color-yellow">Contactez-nous</h1>
-                    <h2 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</h2>
+                    <h2 class="color-yellow">Contactez-nous</h2>
+                    <h3 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</h3>
                 </div>
                 <form method="get" action="#"><!--création du formulaire de contact-->
                     <div class="form-grid mt-50">
@@ -141,10 +142,8 @@
                             <textarea name="message" id="message" rows="5"></textarea>
                         </div>
                     </div>
-                    <div class="mp-bouton">
-                        <button type="submit">Envoyer</button>
-                    </div>
                 </form>
+                <button type="submit">Envoyer</button>
             </div>
         </div>
     </section>
@@ -157,7 +156,7 @@
                 <div>
                     <div class="cadre-a-propos text-center" ><!--création du cadre avec icônes et texte-->
                         <div>
-                            <h2>A propos de nous</h2>
+                            <h3>A propos de nous</h3>
                         </div>
                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis tortor consequat.</div>
                         <div class="row">
@@ -188,8 +187,8 @@
     <section id="galerie"><!--section de la galerie photo-->
         <div class="container text-center mt-100">
             <div>
-                <h1>Notre galerie</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h2>
+                <h2>Notre galerie</h2>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
             </div>
             <div class=mt-50>
                 <img src="images/kevin-bhagat.jpg" alt="un ordinateur sur un bureau" class="photo-galerie">
@@ -218,7 +217,7 @@
                         <div class="taille-client mt-20">
                             Services
                         </div>
-                        <div class="mt-50">Lorem ipsum</div>
+                        <div class="mt-50 mt-sm-50">Lorem ipsum</div>
                         <div>sit amet</div>
                     </div>
                     <div class="color-white mt-20">
@@ -228,14 +227,14 @@
                         <div class="mt-50">Lorem ipsum</div>
                         <div>sit amet</div>
                     </div>
-                    <div class="mp-icon mt-20"><!--mise en page des icônes et texte-->
-                        <div class="align-icon">
-                            <img src="images/telephone.png" alt="Icône de téléphone" class="icon">
-                                <p class="color-white no-pad text-icon">+33 00 00 00 00<br>+33 00 00 00 00</p>
+                    <div class="mp-icon"><!--mise en place des icônes et du texte-->
+                        <div class="mt-20">
+                            <img src="images/telephone.png" alt="une icône de téléphone" class="icon">
+                            <span class="text-icon color-white">+33 00 00 00 00 <br>+33 00 00 00 00</span>
                         </div>
-                        <div class="align-icon marge-icon">
-                            <img src="images/localisation.png" alt="Icône de localisation" class="icon">
-                            <p class="color-white no-pad text-icon">Paris 75001<br>France</p>
+                        <div class="mt-50">
+                            <img src="images/localisation.png" alt="une icône de localisation" class="icon">
+                            <span class="text-icon color-white">Paris 75001 <br>+France</span>
                         </div>
                     </div>
                 </div>

@@ -50,27 +50,20 @@ section{
 .color-white{
     color:white;
 } 
-/*on définit taille et couleur des textes p*/
-/*on définit taille et couleur des titres1*/
-p{
-    font-size: 20px;
- }
- h1{
+/*on définit taille et couleur des titres*/
+
+ h2{
     color: #029d5b;
-    font-size: 4rem;/*on utilise rem plutôt que px pour plus de responsive*/
+    font-size: 3rem;/*on utilise rem plutôt que px pour le responsive*/
 }
-/*on définit taille et couleur des titres2*/
-h2{
-    font-size: 3rem;
-    color:#1C2126;
-}
+/*on définit taille et couleur des titres*/
 h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:#1C2126;
 }
 h4{
-    font-size:1.5rem;
-    color:#015a08;
+    font-size: 1.3rem;
+    color:#1C2126;
 }
 /* Style de base pour l'en-tête */
 header {
@@ -123,35 +116,33 @@ header {
     margin: 4px;
 }
 /*on définit la taille et la position de l'image feuille*/
-.image-feuille {
-    display: block;
-    position:relative;
-    object-fit: cover;/*l'image s'ajuste au container*/
-    object-position: center;/*l'image reste centrée*/
+.image-banner{
+    height: 800px;
     width: 100%;
-    height: 950px;
+    object-fit: cover;
 }
-/*on place le titre dans l'image feuille*/
-.titre-accueil {
-    position: absolute;
-    top: 65vh;
-    left: 40vw;
-    font-size: 3.5vw; /* Taille du texte */
-    text-align: right; /* Centrage du texte */
-    font-weight: 700;
+#banner h1{
+    font-size: 3.5rem;
+    text-align: end;
+    margin-right: 5%;
+    margin-top: -250px;
 }
 /*on définit le style et la couleur du titre*/
-.titre-accueil a{
+#banner h1 a{
     text-decoration: none;/*on retire le surlignage des liens*/
-    color: white; /* Couleur du texte */
+    color:white;/* Couleur du texte */
 }
 /*on définit la couleur et la taille de la police de la deuxiéme partie du titre*/
 .modif-titre{
     color: #d5f31f;
-    font-size: 4.5vw;
+    font-size: 4.5rem;
     font-weight: 700;
 }
 /*l'équipe*/
+/*on définit la marge haute de la section team*/
+.marg-team{
+    margin-top: 100px;
+}
 /*on modifie la taille et la forme de toutes les images team*/
 .team-modif{
     width: 200px;
@@ -168,14 +159,14 @@ header {
     height: 400px;
 }
 /*on aligne les éléments horizontalement et verticalement*/
-.container-2500{
+.container-temoin{
     height:400px;
     justify-content: center;
     align-items: center;
 }
 /*taille et gras de la police des 2500*/
 .taille-2500{
-    font-size:65px; 
+    font-size:3rem; 
     font-weight: bold;
 }
 /*taille de la police du texte dous les 2500*/
@@ -198,8 +189,8 @@ header {
     font-weight: bold;
 }
 /*le formulaire de contact*/
-/*on définit la taille du bloc formulaire et le positionnement des éléments*/
-.bloc-contact{
+/*on définit la taille du container formulaire et le positionnement des éléments*/
+.container-contact{
     width:100%;
     background-color: #053b44;
     height:1000px;
@@ -265,17 +256,13 @@ button{
     border-radius: 25px;
     color:#1C2126;/*couleur de la police*/
     font-weight: bold;
-    padding: 10px 20px;/*padding en hauteur et en largeur*/
+    padding: 0.5em 1em;/*padding en hauteur et en largeur*/
     border: none;
     font-size: 20px; /* Taille de la police */
     cursor: pointer;/*déclenche l'effet au passage de la souris*/
     transition: opacity 0.2s ease;/*on applique un transition pour l'effet visuel qui suit*/
-}
-/*placement du bouton*/
-.mp-bouton{
-    margin-top: 20px;
-    display:flex;
-    justify-content: flex-end;
+    float: right;/*on place le bouton sur la droite du container*/
+    margin-top:1em;/*on lui applique une marge haute */
 }
 /*le bouton s'assombrit quand on passe la souris dessus*/
 button:hover{
@@ -351,23 +338,16 @@ button:hover{
 }
 /*taille  des icônes et positionnementdu texte*/
 .icon{
-    float: left; /* L'image se place à gauche du texte qui suit*/
-    margin-right: 20px; /*Espace entre l'image et le texte*/
-    width:30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
 }
-/*mise en page des icônes*/
-.mp-icon{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.align-icon{
-    display: flex;
-    align-items: center;
-}
-.marge-icon{
-    margin-top: 50px;
+.text-icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
 }
 /*on définit la taille et la couleur du bas du footer*/
 .bloc-end{
@@ -408,61 +388,26 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
+
 /*responsive pour les écrans de moins de 1200px*/
 @media (max-width:1200px){
-    /*on rédéfinit les marges hautes*/
-    .mt-100{
-        margin-top: 50px;
+    p{/*on applique une marge sur les côtés des textes*/
+        margin: 0 20%;
     }
-    .mt-50{
-        margin-top: 25px;
-    }
-    /*on redéfinit la taille des titres*/
-    h1{
-        font-size: 3rem;
-    }
-    h2{
-        padding: 25px;
-        font-size: 2.5rem;
-    }
+    /*on applique une marge sur les titres h3*/
     h3{
-        font-size: 2rem;
+        margin:0 5%;
     }
-    h4{
-        font-size:1.5rem;
-    }
-    /*on redéfinit la taille des éléments du menu*/
-    .navbar {
-        padding:20px;
-    }
+    /* On modifie l'espacement des liens du menu */
     .menu ul li {
-        margin-left: 10px;
+    margin-left: 10px;
     }
+    /* On modifie la taille de la police des liens */
     .menu ul li a {
-        font-size: 0.8rem;
-    }
-    .logo{
-        font-size: 30px;
-    }
-    /*accueil*/
-    .image-feuille{/*on passe l'image feuille en hauteur auto*/
-        height:auto;
-    }
-    .titre-accueil {/*on déplace la phrase d'accueil*/
-        top: 30vh;
-        left: 35vw;
-    }
-    /*témoignages*/
-    /*on redéfinit la taille des éléments de la section témoignages*/
-    .taille-2500{
-        font-size:50px; 
-        font-weight: bold;
-    }
-    .taille-client{
-        font-size:20px;
+    font-size: 18px;
     }
     /*formulaire de contact*/
-    .bloc-contact{/*on applique un padding sur le formulaire de contact*/
+    .container-contact{/*on applique un padding sur le formulaire de contact*/
         padding:15px;
     }
     /*a propos*/
@@ -471,10 +416,12 @@ button:hover{
         height:auto;
       /*  overflow: hidden;*/
     }
+    .container-a-propos{/*on passe le container en bloc classique pour mettre les éléments les uns sous les autres*/
+        display: block;
+    }
     .cadre-a-propos{/*on définit la taille et le style du cadre pour le déplacer sur la photo de réunion*/
-        position: absolute;
-        top:30vh;
-        left:0vw;
+        margin-top: -200px;
+        width:100%;
         opacity:0.9;
         background-color: white;
     }
@@ -485,66 +432,83 @@ button:hover{
     .container-footer{
         padding:20px;
     }
-    .marge-icon{/*on redéfinit la marge entre les icônes et la taille du texte*/
-        margin-top: 20px;
-    }
-    .text-icon{/*on redéfinit la taille du texte des icônes*/
-        font-size: 15px;
+    /*on retire la marge appliquée aux textes sur le texte du bas de page*/
+    .no-pad{
+        margin: 0;
     }
   }
+  /*responsive pour les écrans de moins de 1024px*/
+@media (max-width:1024px){
+    /*on active le menu burger*/
+    .menu {
+       display: none; /* Cacher le menu normal */
+   }
+   .burger {
+       display: flex; /* Afficher le burger */
+   }
+   /* Menu en mode mobile */
+   .menu.active {
+       display: block;
+       position: absolute;
+       top: 60px;
+       right: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+   }
+   .menu.active ul {
+       flex-direction: column; /* Liste verticale */
+   }
+   .menu.active ul li {
+       margin: 15px 0;
+   }
+   /*on redéfinit la taille et la position du titre dans l'image*/
+    #banner h1{
+        font-size: 2.5rem;
+    }
+    /*on redéfinit la taille de la police de la deuxiéme partie du titre*/
+    .modif-titre{
+        font-size: 3.5rem;
+    }
+    #banner h1{
+        font-size: 3.5rem;
+        text-align: end;
+        margin-right: 5%;
+        margin-top: -200px;
+    }
+}
 /*responsive pour les écrans de moins de 768px*/
 @media (max-width: 768px) {
-    
     .col-sm-100{/*si la totalité des éléments en ligne dépasse 100% de la largeur de l'écran, ils passent en colonne*/
         width:100%;
     }
-    /*on rédéfinit les marges hautes*/
     .mt-100{
-        margin-top: 20px;
+        margin-top: 50px;
     }
     .mt-50{
-        margin-top: 20px;
-    }
-    p{/*on redéfinit la taille des textes et on applique un padding*/
-        font-size: 15px;
-        padding: 30px;
+        margin-top: 25px;
     }
     /*on redéfinit la taille des titres*/
-    h1{
+    h2{
         font-size: 2rem;
     }
-    h2{
-        padding: 25px;
+    h3{
         font-size: 1.5rem;
     }
-    h3{
+    h4{
         font-size: 1.3rem;
     }
-    h4{
-        font-size:1.1rem;
+    /*on redéfinit la taille et la position du titre dans l'image*/
+    #banner h1{
+        font-size: 2rem;
     }
-    /*menu burger*/
-    .menu {
-        display: none; /* Cacher le menu normal */
+    /*on redéfinit la taille de la police de la deuxiéme partie du titre*/
+    .modif-titre{
+        font-size: 2.5rem;
     }
-    .burger {
-        display: flex; /* Afficher le burger */
-    }
-    /* Menu en mode mobile */
-    .menu.active {
-        display: block;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-    }
-    .menu.active ul {
-        flex-direction: column; /* Liste verticale */
-    }
-    .menu.active ul li {
-        margin: 15px 0;
+    /*on redéfinit la marge de la section team*/
+    .marg-team{
+        margin-top: 75px;
     }
     /*témoignages*/
     .taille-2500{/*taille et gras de la police des 2500*/
@@ -570,17 +534,12 @@ button:hover{
     .form-grid{/*on passe en bloc classique*/
         display: block;  
     }
-    .bloc-contact{/*on redéfinit la taille du bloc background + padding*/
-        padding:15px;
+    .container-contact{/*on redéfinit la taille du bloc background + padding*/
         height:850px;
     }
     /*a propos*/
-    .container-a-propos{/*on passe en bloc classique*/
-        display: block;
-        width:1000px;
-    }
     .cadre-a-propos{/*on redéfinit la position et le background du cadre a propos*/
-        position: static;
+        margin-top: 0;
         background-color: transparent;
         width:100%;
     }
@@ -601,28 +560,21 @@ button:hover{
     .container-mentions{/*on passe en bloc classique*/
         display: block;
     }
-    .bloc-mentions{/*on reéfinit la hauteur du container avec les mentions*/
-        height:620px;
+    .bloc-mentions{/*on redéfinit la hauteur du container avec les mentions*/
+        height:550px;
     }
-    .no-pad{/*on supprime le padding sur le texte des icônes*/
-        padding: 0;
+    .mp-icon{/*on replace les icônes sur la droite du container*/
+        margin-top: -140px;
+        float:right;
     }
-    .marge-icon{/*on redéfinit la marge entre les icônes*/
-        margin-top: 15px;
-    }
-}
-/* Positionnement pour les petits écrans */
-@media (max-width: 600px) {
-    .titre-accueil {/*positionnement du titre dans la photo d'accueil*/
-      top: 20vh;
-      left: 35vw;
+    .icon{/*on diminue la marge entre les icônes et le texte*/
+        margin-right: 5px;
     }
 }
-/*positionnement du cadre à propos dans la photo réunion entre 1200 et 768px*/
-@media(min-width:768px) and (max-width:1200px){
-    .container-a-propos{
-        position: relative;
-        height:800px
+@media (max-width:515px){
+    #banner h1{/*on redéfinit la marge haute lorsque la deuxième partie du titre passe à la ligne*/
+        margin-top: -255px;
     }
 }
+
 
