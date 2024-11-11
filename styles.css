@@ -293,6 +293,7 @@ button:hover{
     border:2px solid;
     border-radius:20px;
     border-color: #053B44;
+    padding: 5%;
 }
 /*la taille des logos*/
 .logo{
