@@ -166,7 +166,7 @@ header {
 }
 /*taille et gras de la police des 2500*/
 .taille-2500{
-    font-size:3rem; 
+    font-size:3.5rem; 
     font-weight: bold;
 }
 /*taille de la police du texte dous les 2500*/
@@ -512,7 +512,7 @@ button:hover{
     }
     /*témoignages*/
     .taille-2500{/*taille et gras de la police des 2500*/
-        font-size:40px;
+        font-size:2.5rem;
     }   
     .taille-client{/*taille de la police du texte dous les 2500*/
         font-size: 20px;
